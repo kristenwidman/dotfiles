@@ -6,3 +6,12 @@ defscrollback 32000
 
 # Always start `screen` with UTF-8 enabled (`screen -U`)
 defutf8 on
+
+#kwidman adds from work
+shell -$SHELL
+autodetach on
+altscreen on
+defscrollback 5000
+vbell off
+escape ^Xx
+caption always "%{b kw} %H | %l | %c | %{=r wk} %-w%{=b kg}%50>%n%f %t%{-}%+Lw%<%{- Wk}%="
