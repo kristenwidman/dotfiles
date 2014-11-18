@@ -1,6 +1,4 @@
-" Jeff Widman
-" jeff@jeffwidman.com
-
+" Kristen Widman
 
 " #TODO start with everything commented out, then slowly add stuff and work with it to see it
 
@@ -127,7 +125,7 @@ set lazyredraw                 " redraw only when we need to.
 set showmatch                  " when on a [{(, highlight the matching )}]
 set hlsearch                   " highlight search matches
 "set list
-set listchars=tab:▷⋅,trail:⋅,nbsp:⋅  "display tabs and trailing spaces
+"set listchars=tab:▷⋅,trail:⋅,nbsp:⋅  "display tabs and trailing spaces
 set background=dark
 "colorscheme base16-ocean
 
@@ -154,6 +152,7 @@ set expandtab                  " Convert all TAB characters in the file to space
 augroup configgroup            " an augroup ensures the autocmd's are only applied once
   autocmd FileType python setlocal shiftwidth=4 tabstop=4 textwidth=79
   autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+  autocmd FileType html setlocal shiftwidth=2 tabstop=2
 augroup END
 
 "Remap jk/kj to escape while in insert mode:
@@ -163,3 +162,24 @@ inoremap kj <esc>
 
 "Enable mouse highlighting
 if has('mouse') | set mouse=a | endif
+
+"kristen add-ons
+"expandtab causes tabs to be inserted as spaces in insert mode
+set autoindent
+set smarttab
+set nocindent
+
+filetype indent on
+filetype plugin on
+autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+nnoremap <silent> <C-S> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>
+imap <c-s> <Esc><c-s>
+
+"maps F5 key to run current python file
+map! <F5> <Esc>:w<CR>:!python % <CR> 
+map <F5> <Esc>:w<CR>:!python % <CR>
+
+"show whitespace
+set list
+set listchars=tab:>-,trail:·
+

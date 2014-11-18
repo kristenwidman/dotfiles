@@ -54,3 +54,30 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 setopt RM_STAR_WAIT
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+#k's add-ons
+autoload -U colors && colors
+
+title() { print -Pn "\e]0;${USER}@$(hostname | cut -d. -f1): $*\a"; }
+precmd() { title "zsh"; }
+preexec() { title $1; }
+
+setopt NO_BEEP
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY SHARE_HISTORY
+unsetopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+
+HISTFILE=$HOME/.dotfiles/.zsh/.zhistory
+HISTSIZE=1000
+SAVEHIST=1000
+WORDCHARS="${WORDCHARS:s#/#}"
+
+alias ll='ls -la' # show hidden files
+alias lr='ls -lR' # recursive ls
+
+alias sr='screen -DRR' # screen resume
+
+# command line movement by word/line with alt-arrow or cmd-arrow
+bindkey '^[[1;9C' forward-word
+bindkey '^[[1;9D' backward-word
