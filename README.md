@@ -45,6 +45,14 @@ configuration files (dotfiles) in this repo.
  3. Save and exit
  4. `$ chsh -s /usr/local/bin/zsh`
 
+7. If using iTerm2, clone themes into a directory of your choice:
+    `git clone git@github.com:kristenwidman/base16-iterm2.git` or `git clone git@github.com:kristenwidman/solarized.git`
+  1. Go to iTerm > Preferences > Profiles > Colors
+  2. Select Import from the Load Presets dropdown
+  3. Import selected theme (Solarized Dark preferred)
+  4. Again select Load Presets and select imported theme
+  5. If background is too bright, click on 'Background' in Basic Colors and adjust to desired color
+
 ---
 ##How to symlink a dotfile using `stow`
 
