@@ -74,6 +74,7 @@ SAVEHIST=1000
 WORDCHARS="${WORDCHARS:s#/#}"
 
 alias ll='ls -la' # show hidden files
+alias la='ls -la' # show hidden files, same as above
 alias lr='ls -lR' # recursive ls
 
 alias sr='screen -DRR' # screen resume

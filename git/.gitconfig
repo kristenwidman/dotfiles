@@ -2,8 +2,8 @@
 # git-config man page: https://www.kernel.org/pub/software/scm/git/docs/git-config.html
 
 [user]
-  name = Jeff Widman
-  email = jeff@jeffwidman.com
+  name = Kristen Widman
+  email = kristenwidman@gmail.com
 
 [color]
 # ui = true is a superset of all the more specific color options
