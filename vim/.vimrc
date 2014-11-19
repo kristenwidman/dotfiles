@@ -130,9 +130,9 @@ set background=dark
 "colorscheme base16-ocean
 
 "mark the ideal max text width
-if v:version >= 703
-    set colorcolumn=+1
-endif
+"if v:version >= 703
+"    set colorcolumn=+1
+"endif
 
 
 set history=1000               " store lots of :cmdline history
