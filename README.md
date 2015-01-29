@@ -25,19 +25,18 @@ configuration files (dotfiles) in this repo.
     `xcode-select --install`
 
 2. Pull git repo.
-    a. First, create ssh keys and add them to github (if a new computer):
-        `ssh-keygen -t rsa -C "kristenwidman@gmail.com"`
-        # start the ssh-agent in the background
-        `eval "$(ssh-agent -s)"`
-        # Agent pid 59566
-        `ssh-add ~/.ssh/id_rsa`
-        # copy ssh key to clipboard
-        `pbcopy < ~/.ssh/id_rsa.pub`
-        Add/paste new SSH key in github
-    b. `git clone git@github.com:kristenwidman/dotfiles.git ~/.dotfiles`
+    - First, create ssh keys and add them to github (if a new computer):
+        - `ssh-keygen -t rsa -C "kristenwidman@gmail.com"`
+        - # start the ssh-agent in the background
+        - `eval "$(ssh-agent -s)"`
+        - `ssh-add ~/.ssh/id_rsa`
+        - # copy ssh key to clipboard  `pbcopy < ~/.ssh/id_rsa.pub`
+        - Add/paste new SSH key in github
+    - `git clone git@github.com:kristenwidman/dotfiles.git ~/.dotfiles`
 
 3. Install desired binaries using your favorite package manager.
   - If on OSX, install [Homebrew](http://brew.sh/)
+        - `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
   - `brew bundle` [is deprecated](https://github.com/Homebrew/homebrew/issues/32952), so just manually run the Homebrew
     commands listed in `~/.dotfiles/homebrew/Brewfile`
   - Make sure Stow gets installed, we'll use this later to symlink the dotfiles.
