@@ -21,31 +21,34 @@ configuration files (dotfiles) in this repo.
 ---
 ##Install steps on a clean OSX machine:
 
-1. `git clone git@github.com:kristenwidman/dotfiles.git ~/.dotfiles`
+1. Install X-code command line tools:
+    `xcode-select --install`
 
-2. Install desired binaries using your favorite package manager.
+2. `git clone git@github.com:kristenwidman/dotfiles.git ~/.dotfiles`
+
+3. Install desired binaries using your favorite package manager.
   - If on OSX, install [Homebrew](http://brew.sh/)
   - `brew bundle` [is deprecated](https://github.com/Homebrew/homebrew/issues/32952), so just manually run the Homebrew
     commands listed in `~/.dotfiles/homebrew/Brewfile`
   - Make sure Stow gets installed, we'll use this later to symlink the dotfiles.
 
-3. Install [RVM](http://rvm.io/)
+4. Install [RVM](http://rvm.io/)
 
-4. Install Prezto:
+5. Install Prezto:
     - Install [my fork](https://github.com/jeffwidman/prezto) because it includes a plugin for [Atom](http://atom.io):
     `git clone --recursive git@github.com:jeffwidman/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"`
     - The default prezto instructions say to symlink the default config files.
       *Don't do this*; instead use Stow to symlink your own config files.
 
-5. Now start `stow`'ing the various dotfiles - detailed instructions below.
+6. Now start `stow`'ing the various dotfiles - detailed instructions below.
 
-6. Make ZSH the default shell.  
+7. Make ZSH the default shell.  
  1. `$ $EDITOR /etc/shells`
  2. Append the path to zsh - Homebrew sticks it in `/usr/local/bin/zsh`
  3. Save and exit
  4. `$ chsh -s /usr/local/bin/zsh`
 
-7. If using iTerm2, clone themes into a directory of your choice:
+8. If using iTerm2, clone themes into a directory of your choice:
     `git clone git@github.com:kristenwidman/base16-iterm2.git` or `git clone git@github.com:kristenwidman/solarized.git`
   1. Go to iTerm > Preferences > Profiles > Colors
   2. Select Import from the Load Presets dropdown
