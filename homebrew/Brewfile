@@ -3,6 +3,9 @@
 # Install packages using Homebrew for OSX
 # Usage: `brew bundle Brewfile`
 
+# Run the doctor first
+brew doctor
+
 # Make sure we’re using the latest Homebrew:
 update
 
