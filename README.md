@@ -24,7 +24,17 @@ configuration files (dotfiles) in this repo.
 1. Install X-code command line tools:
     `xcode-select --install`
 
-2. `git clone git@github.com:kristenwidman/dotfiles.git ~/.dotfiles`
+2. Pull git repo.
+    a. First, create ssh keys and add them to github (if a new computer):
+        `ssh-keygen -t rsa -C "kristenwidman@gmail.com"`
+        # start the ssh-agent in the background
+        `eval "$(ssh-agent -s)"`
+        # Agent pid 59566
+        `ssh-add ~/.ssh/id_rsa`
+        # copy ssh key to clipboard
+        `pbcopy < ~/.ssh/id_rsa.pub`
+        Add/paste new SSH key in github
+    b. `git clone git@github.com:kristenwidman/dotfiles.git ~/.dotfiles`
 
 3. Install desired binaries using your favorite package manager.
   - If on OSX, install [Homebrew](http://brew.sh/)
