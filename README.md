@@ -21,7 +21,7 @@ configuration files (dotfiles) in this repo.
 ---
 ##Install steps on a clean OSX machine:
 
-1. `git clone git@github.com:jeffwidman/dotfiles.git ~/.dotfiles`
+1. `git clone git@github.com:kristenwidman/dotfiles.git ~/.dotfiles`
 
 2. Install desired binaries using your favorite package manager.
   - If on OSX, install [Homebrew](http://brew.sh/)
