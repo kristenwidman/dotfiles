@@ -59,12 +59,12 @@ configuration files (dotfiles) in this repo.
  4. `$ chsh -s /usr/local/bin/zsh`
 
 8. If using iTerm2, clone themes into a directory of your choice:
-    `git clone git@github.com:kristenwidman/base16-iterm2.git` or `git clone git@github.com:kristenwidman/solarized.git`
-  1. Go to iTerm > Preferences > Profiles > Colors
-  2. Select Import from the Load Presets dropdown
-  3. Import selected theme (Solarized Dark preferred)
-  4. Again select Load Presets and select imported theme
-  5. If background is too bright, click on 'Background' in Basic Colors and adjust to desired color
+  1. Go to http://ethanschoonover.com/solarized
+  2. Download latest version
+  3. Unzip and doubleclick the Solarized Dark theme for ansi.terminal or iterm
+  4. Select the theme in the Terminal.app preferences under Settings > Profiles. You can press default to have it default selected.
+  5. Darken the background and lighten the foreground to get better contrast
+  
 
 ---
 ##How to symlink a dotfile using `stow`
