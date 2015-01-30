@@ -42,9 +42,9 @@ configuration files (dotfiles) in this repo.
   - instead, run the brew_setup shell script
   - Make sure Stow gets installed, we'll use this later to symlink the dotfiles. (should be done by the setup file)
 
-4. Install [RVM](http://rvm.io/)
+4. Install [Ruby Version Manager (RVM)](http://rvm.io/) 
 
-5. Install Prezto:
+5. Install Prezto (zsh config scripts):
     - Install [my fork](https://github.com/jeffwidman/prezto) because it includes a plugin for [Atom](http://atom.io):
     `git clone --recursive git@github.com:jeffwidman/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"`
     - The default prezto instructions say to symlink the default config files.
