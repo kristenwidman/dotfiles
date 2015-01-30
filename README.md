@@ -37,9 +37,10 @@ configuration files (dotfiles) in this repo.
 3. Install desired binaries using your favorite package manager.
   - If on OSX, install [Homebrew](http://brew.sh/)
         - `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-  - `brew bundle` [is deprecated](https://github.com/Homebrew/homebrew/issues/32952), so just manually run the Homebrew
+  - `brew bundle` [is deprecated](https://github.com/Homebrew/homebrew/issues/32952), so ignore the Homebrew
     commands listed in `~/.dotfiles/homebrew/Brewfile`
-  - Make sure Stow gets installed, we'll use this later to symlink the dotfiles.
+  - instead, run the brew_setup shell script
+  - Make sure Stow gets installed, we'll use this later to symlink the dotfiles. (should be done by the setup file)
 
 4. Install [RVM](http://rvm.io/)
 
