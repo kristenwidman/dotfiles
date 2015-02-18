@@ -37,13 +37,14 @@ configuration files (dotfiles) in this repo.
 3. Install desired binaries using your favorite package manager.
   - If on OSX, install [Homebrew](http://brew.sh/)
         - `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-  - `brew bundle` [is deprecated](https://github.com/Homebrew/homebrew/issues/32952), so just manually run the Homebrew
+  - `brew bundle` [is deprecated](https://github.com/Homebrew/homebrew/issues/32952), so ignore the Homebrew
     commands listed in `~/.dotfiles/homebrew/Brewfile`
-  - Make sure Stow gets installed, we'll use this later to symlink the dotfiles.
+  - instead, run the brew_setup shell script
+  - Make sure Stow gets installed, we'll use this later to symlink the dotfiles. (should be done by the setup file)
 
-4. Install [RVM](http://rvm.io/)
+4. Install [Ruby Version Manager (RVM)](http://rvm.io/) 
 
-5. Install Prezto:
+5. Install Prezto (zsh config scripts):
     - Install [my fork](https://github.com/jeffwidman/prezto) because it includes a plugin for [Atom](http://atom.io):
     `git clone --recursive git@github.com:jeffwidman/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"`
     - The default prezto instructions say to symlink the default config files.
@@ -58,12 +59,12 @@ configuration files (dotfiles) in this repo.
  4. `$ chsh -s /usr/local/bin/zsh`
 
 8. If using iTerm2, clone themes into a directory of your choice:
-    `git clone git@github.com:kristenwidman/base16-iterm2.git` or `git clone git@github.com:kristenwidman/solarized.git`
-  1. Go to iTerm > Preferences > Profiles > Colors
-  2. Select Import from the Load Presets dropdown
-  3. Import selected theme (Solarized Dark preferred)
-  4. Again select Load Presets and select imported theme
-  5. If background is too bright, click on 'Background' in Basic Colors and adjust to desired color
+  1. Go to http://ethanschoonover.com/solarized
+  2. Download latest version
+  3. Unzip and doubleclick the Solarized Dark theme for ansi.terminal or iterm
+  4. Select the theme in the Terminal.app preferences under Settings > Profiles. You can press default to have it default selected.
+  5. Darken the background and lighten the foreground to get better contrast
+  
 
 ---
 ##How to symlink a dotfile using `stow`
