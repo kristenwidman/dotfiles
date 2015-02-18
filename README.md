@@ -54,7 +54,7 @@ configuration files (dotfiles) in this repo.
 
 7. Make ZSH the default shell.  
  1. `$ $EDITOR /etc/shells`
- 2. Append the path to zsh - Homebrew sticks it in `/usr/local/bin/zsh`
+ 2. Append the path to zsh - Homebrew sticks it in `/usr/local/bin/zsh` (in other words, append 'usr/local/bin/zsh' to the bottom of /etc/shells)
  3. Save and exit
  4. `$ chsh -s /usr/local/bin/zsh`
 
