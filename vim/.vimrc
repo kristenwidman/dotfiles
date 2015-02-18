@@ -161,10 +161,9 @@ inoremap kj <esc>
 
 
 "Enable mouse highlighting
-if has('mouse') | set mouse=a | endif
+" if has('mouse') | set mouse=a | endif
 
 "kristen add-ons
-"expandtab causes tabs to be inserted as spaces in insert mode
 set autoindent
 set smarttab
 set nocindent
@@ -183,3 +182,45 @@ map <F5> <Esc>:w<CR>:!python % <CR>
 set list
 set listchars=tab:>-,trail:·
 
+" fix python comment indentation
+inoremap # X<c-h>#
+
+let mapleader = ";"
+
+" allow Control-movement keys to move up/down/left/right vim panes
+map <C-k> <C-w><Up>
+map <C-j> <C-w><Down>
+map <C-l> <C-w><Right>
+map <C-h> <C-w><>Left>
+
+" Underline current line
+nmap <silent> <leader>c :set cursorline!<CR>
+" shortcut for starting a new file
+nmap <silent> <leader>e :edit
+" print current filename
+nmap <silent> <leader>f :f<CR>
+" clear highlight from last search (re-enables on next search)
+nmap <silent> <leader>h :silent :nohlsearch<CR>
+" toggle line numbers
+nmap <silent> <leader>n :set number!<CR>
+" start a new vertical split
+nmap <silent> <leader>N :vs<CR>
+" enter paste mode
+nmap <silent> <leader>P :set paste!<CR>
+" clase without saving current buffer
+nmap <silent> <leader>q :q<CR>
+" force quit vim, close all buffers without writing
+nmap <silent> <leader>Q :qall!<CR>
+" resource vimrc
+nmap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo '.vimrc reloaded'"<CR>
+" write to file
+nmap <silent> <leader>w :w<CR>
+
+" In insert mode replace 'pybang' with ...
+iab pybang #!/usr/bin/env python
+" In insert mode replace 'pymain' with ...
+iab pymain if __name__ == '__main__':
+
+" match paren color
+hi clear MatchParen
+hi MatchParen ctermbg=7

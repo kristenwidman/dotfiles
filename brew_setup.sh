@@ -1,6 +1,6 @@
-#ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-#brew doctor
+brew doctor
 
 # Make sure we’re using the latest Homebrew:
 brew update
@@ -45,12 +45,12 @@ brew cask install firefox
 brew cask install flux
 brew cask install google-chrome
 brew cask install google-drive
-#brew cask install google-earth
+# brew cask install google-earth
 brew cask install iterm2
 brew cask install skype
 brew cask install virtualbox
 brew cask install vlc
-#brew cask install vagrant
+# brew cask install vagrant
 
 # Remove outdated versions from the cellar cleanup
 brew cask cleanup
