@@ -2,8 +2,8 @@
 # git-config man page: https://www.kernel.org/pub/software/scm/git/docs/git-config.html
 
 [user]
-  name = Kristen Widman
-  email = kristenwidman@gmail.com
+	name = Kristen Widman
+	email = kristenwidman@gmail.com
 
 [color]
 # ui = true is a superset of all the more specific color options
@@ -32,7 +32,7 @@
   #untracked = cyan
 
 [core]
-  excludesfile = ~/.gitignore_global
+	excludesfile = /Users/kristenwidman/.gitignore_global
   compression = 9
 
   # Prevent line ending issues--change to 'true' on Windows
@@ -59,7 +59,7 @@
 
 [alias]
 [difftool "sourcetree"]
-	cmd = " "
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"

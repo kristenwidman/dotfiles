@@ -1,0 +1,4 @@
+source .dotfiles/vim/.vimrc
+
+:imap jk <esc>
+:imap kj <esc>

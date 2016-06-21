@@ -150,7 +150,7 @@ filetype plugin indent on      " Enable file type detection and do language-depe
 set expandtab                  " Convert all TAB characters in the file to spaces
 
 augroup configgroup            " an augroup ensures the autocmd's are only applied once
-  autocmd FileType python setlocal shiftwidth=4 tabstop=4 textwidth=79
+  autocmd FileType python setlocal shiftwidth=4 tabstop=4
   autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
   autocmd FileType html setlocal shiftwidth=2 tabstop=2
 augroup END
@@ -205,8 +205,8 @@ nmap <silent> <leader>h :silent :nohlsearch<CR>
 nmap <silent> <leader>n :set number!<CR>
 " start a new vertical split
 nmap <silent> <leader>N :vs<CR>
-" enter paste mode
-nmap <silent> <leader>P :set paste!<CR>
+" toggle paste mode
+nmap <silent> <leader>p :set paste!<CR>
 " clase without saving current buffer
 nmap <silent> <leader>q :q<CR>
 " force quit vim, close all buffers without writing
