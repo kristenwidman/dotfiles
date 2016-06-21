@@ -25,6 +25,7 @@ install lesspipe # pre-processes various file formats so they can be paged via L
 install ctags
 install stow
 install --HEAD https://raw.github.com/neovim/neovim/master/neovim.rb #TODO: Update once Neovim 1.0 released
+install screen
 
 # Install all the databases
 install sqlite
