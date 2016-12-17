@@ -35,14 +35,22 @@ configuration files (dotfiles) in this repo.
     - `git clone git@github.com:kristenwidman/dotfiles.git ~/.dotfiles`
 
 3. Install desired binaries using your favorite package manager.
+
+1. Install [Homebrew](http://brew.sh/).
+    2. Install [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle): `$ brew tap Homebrew/bundle`
+    3. `$ brew bundle --file=~/.dotfiles/homebrew/.Brewfile`
+    After the `.Brewfile` is symlinked into ``~/.Brewfile`, just use `$ brew bundle --global`.
+  - Make sure Stow gets installed, we'll use this later to symlink the dotfiles.
+
+
   - If on OSX, install [Homebrew](http://brew.sh/)
-        - `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-  - `brew bundle` [is deprecated](https://github.com/Homebrew/homebrew/issues/32952), so ignore the Homebrew
-    commands listed in `~/.dotfiles/homebrew/Brewfile`
-  - instead, run the brew_setup shell script
+      1. `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+      2. Install [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle): `$ brew tap Homebrew/bundle`
+      3. `$ brew bundle --file=~/.dotfiles/homebrew/.Brewfile`
+      After the `.Brewfile` is symlinked into ``~/.Brewfile`, just use `$ brew bundle --global`.
   - Make sure Stow gets installed, we'll use this later to symlink the dotfiles. (should be done by the setup file)
 
-4. Install [Ruby Version Manager (RVM)](http://rvm.io/) 
+4. Install [Ruby Version Manager (RVM)](http://rvm.io/)
 
 5. Install Prezto (zsh config scripts):
     - Install [my fork](https://github.com/jeffwidman/prezto) because it includes a plugin for [Atom](http://atom.io):
@@ -64,7 +72,7 @@ configuration files (dotfiles) in this repo.
   3. Unzip and doubleclick the Solarized Dark theme for ansi.terminal or iterm
   4. Select the theme in the Terminal.app preferences under Settings > Profiles. You can press default to have it default selected.
   5. Darken the background and lighten the foreground to get better contrast
-  
+
 
 ---
 ##How to symlink a dotfile using `stow`
