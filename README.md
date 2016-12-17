@@ -154,16 +154,10 @@ Fonts that I like:
 ---
 ## Thanks
 
-- [@dave-tucker](https://github.com/davetucker/dotfiles) - Initial inspiration,
-although I totally rebooted my dotfiles several times since then
-- [@chriskempson](https://github.com/chriskempson/base16) - for base16
-- [@sorin-ionescu](https://github.com/sorin-ionescu/prezto) - for prezto
-- [@skwp](https://github.com/skwp/dotfiles) - another inspiration dotfiles repo
-- [@mathiasbyens](https://github.com/mathiasbynens/dotfiles) - for his awesome osx customization script
-- [@erikzaadi](http://www.erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/) - for the auto-installation of vundle in vimrc
+- [@jeffwidman](https://github.com/jeffwidman/dotfiles) - For helping me set this up.
 
 ---
 ## License
 
-Copyright 2014 Jeff Widman
+Copyright 2016 Kristen Widman
 Licensed under the MIT License
