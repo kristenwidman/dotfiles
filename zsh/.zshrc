@@ -9,14 +9,8 @@ fi
 
 # Customize to your needs...
 
-### Postgres
-export PGDATA="/usr/local/var/postgres"
 
-### VirtualEnv
-# Note: maybe these should be in .zshenv rather than .zshrc
-# virtualenv should use Distribute instead of legacy setuptools
-export VIRTUALENV_DISTRIBUTE=true
-
+### VirtualEnv ###
 # pip should only run if there is a virtualenv currently activated
 # prevents accidentally installing packages without a virtualenv
 export PIP_REQUIRE_VIRTUALENV=true
@@ -28,24 +22,23 @@ syspip3(){
    PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
 }
 
-### VirtualEnvWrapper
-# Note: maybe these should be in .zshenv rather than .zshrc
-export PROJECT_HOME=$HOME/Code/git
 
-# The variable $VIRTUALENVWRAPPER_VIRTUALENV_ARGS tells
-# virtualenvwrapper what arguments to pass to virtualenv.
-# For example, set the value to --no-site-packages to ensure # that all new environments are isolated from the system
-# site-packages directory.
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+### iTerm2 shell integration ###
+# https://iterm2.com/documentation-shell-integration.html
+# For safety, first verify that the file actually exists and that this is an
+# OSX box in case I accidentally stow'd the file from my dotfiles on a different platform
+if [[ -s "${ZDOTDIR:-$HOME}/.iterm2_shell_integration.zsh" && "$OSTYPE" = darwin* ]]; then
+    source "${ZDOTDIR:-$HOME}/.iterm2_shell_integration.zsh"
+fi
 
 
-### Use Base16 templating system to theme shell colors
+### Use Base16 templating system to theme shell colors ###
 # if [[ -s "$HOME/.config/base16-shell/base16-ocean.dark.sh" ]]; then
 #   source "$HOME/.config/base16-shell/base16-ocean.dark.sh"
 # fi
 
 
-### Extra ZSH options
+### Extra ZSH options ###
 # If querying the user before executing `rm *' or `rm
 # path/*', first wait ten seconds and ignore anything typed
 # in that time. This avoids the problem of reflexively
@@ -53,7 +46,6 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 # it.
 setopt RM_STAR_WAIT
 
-#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 #k's add-ons
 autoload -U colors && colors
