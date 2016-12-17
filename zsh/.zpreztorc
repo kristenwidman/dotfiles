@@ -25,10 +25,10 @@ zstyle ':prezto:load' pmodule \
   'terminal' \
   'editor' \
   'osx' \
-  'notify' \
   'homebrew' \
   'atom' \
   'git' \
+  'rsync' \
   'ruby' \
   'python' \
   'history' \
@@ -39,7 +39,15 @@ zstyle ':prezto:load' pmodule \
   'fasd' \
   'syntax-highlighting' \
   'history-substring-search' \
+  'autosuggestions' \
   'prompt'
+
+#
+# Autosuggestions
+#
+
+# Set the query found color.
+# zstyle ':prezto:module:autosuggestions:color' found ''
 
 #
 # Editor
@@ -129,9 +137,10 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
    'main' \
    'brackets' \
    'pattern' \
+   'line' \
    'cursor' \
    'root'
-#
+
 # Set syntax highlighting styles.
 # zstyle ':prezto:module:syntax-highlighting' styles \
 #   'builtin' 'bg=blue' \
@@ -160,3 +169,6 @@ zstyle ':prezto:module:terminal' auto-title 'yes'
 
 # Auto start a session when Zsh is launched in a SSH connection.
 # zstyle ':prezto:module:tmux:auto-start' remote 'yes'
+
+# Integrate with iTerm2.
+# zstyle ':prezto:module:tmux:iterm' integrate 'yes'
